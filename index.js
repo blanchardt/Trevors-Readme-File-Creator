@@ -4,6 +4,11 @@ const fs = require('fs');
 
 const questions = ['What is your GitHub username?', 'What is your email address?', 'What is your project\'s name?', 'Please writ a short description of your project?', 'What kind of license should your project have?', 'What command should be run to install dependencies?', 'What command should be run to run tests?', 'What does the user need to know about using the repo?', 'What does the user need to know about contributing to the repo?'];
 
+//function that creates the text for the README file.
+const createText = ({ userName }) =>
+  `## Question
+If you have any questions about the repo, open an issue or contact me directly at __PLACEHOLDER__.  You can find more of my work at [${userName}](https://github.com/${userName}/).`;
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
@@ -14,7 +19,18 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile('./Created-File/README.md', 'test')
+  inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: questions[0],
+      name: 'userName',
+    },
+  ])
+  .then((data) => {
+    const text = createText(data);
+    writeToFile('./Created-File/README.md', text);
+  });
 }
 
 // Function call to initialize app
