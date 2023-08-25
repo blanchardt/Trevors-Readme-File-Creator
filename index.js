@@ -14,7 +14,8 @@ const createText = ({ userName, email, title, description, license, install, run
 
   //check if there was a license selected or not.
   if (license !== "None") {
-    licenseBadge = `![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)  `;
+    licenseBadge = `![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)  
+`;
     licenseSection = `
 
 ## License  
@@ -23,8 +24,7 @@ This project is licensed under the ${license} license.  `
 
   //return the text for the README file.
   return `# ${title}  
-${licenseBadge}    
-
+${licenseBadge}
 ## Description  
 ${description}  
 
