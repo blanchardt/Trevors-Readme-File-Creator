@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const questions = ['What is your GitHub username?', 'What is your email address?', 'What is your project\'s name?', 'Please writ a short description of your project?', 'What kind of license should your project have?', 'What command should be run to install dependencies?', 'What command should be run to run tests?', 'What does the user need to know about using the repo?', 'What does the user need to know about contributing to the repo?'];
+const questions = ['What is your GitHub username?', 'What is your email address?', 'What is your project\'s name?', 'Please writ a short description of your project?', 'What kind of license does your project have?', 'What command should be run to install dependencies?', 'What command should be run to run tests?', 'What does the user need to know about using the repo?', 'What does the user need to know about contributing to the repo?'];
 
 //function that creates the text for the README file.
 const createText = ({ userName, email, title, description }) =>
@@ -43,6 +43,11 @@ function init() {
       type: 'input',
       message: questions[3],
       name: 'description',
+    },
+    {
+      type: 'input',
+      message: questions[4],
+      name: 'license',
     },
   ])
   .then((data) => {
