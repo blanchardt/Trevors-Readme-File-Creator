@@ -7,7 +7,7 @@ const questions = ['What is your GitHub username?', 'What is your email address?
 //Went to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll to figure out how to replace spaces with underscores.
 //also credited in the README file.
 //function that creates the text for the README file.
-const createText = ({ userName, email, title, description, license, install, run, useRepo }) =>
+const createText = ({ userName, email, title, description, license, install, run, useRepo, contribution }) =>
   `# ${title}  
 ![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)    
 
@@ -21,8 +21,11 @@ To install necessary dependencies, run the following command:
 ${install}  
 \`\`\`  
 
-##Usage  
+## Usage  
 ${useRepo}  
+
+## Contributing  
+${contribution}  
 
 ## Tests  
 To run tests, run the following command:  
@@ -88,6 +91,11 @@ function init() {
       type: 'input',
       message: questions[7],
       name: 'useRepo',
+    },
+    {
+      type: 'input',
+      message: questions[8],
+      name: 'contribution',
     },
   ])
   .then((data) => {
