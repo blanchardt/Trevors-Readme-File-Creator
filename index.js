@@ -73,6 +73,17 @@ function init() {
       type: 'input',
       message: questions[1],
       name: 'email',
+      validate: function(email) {
+        //went to https://www.abstractapi.com/tools/email-regex-guide to learn more about regular expressions,speciffically about validating
+        //email addresses.
+        var acceptanceCriteria = /[-a-zA-Z0-9!#$%&'*+-./=<>?^@\\_`|~]+@[-a-zA-Z0-9]+.[-a-zA-Z0-9]/;
+        if (acceptanceCriteria.test(email)) {
+          return true;
+        }
+        else {
+          return "Please enter a valid email address.";
+        }
+      }
     },
     {
       type: 'input',
