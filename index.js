@@ -7,9 +7,23 @@ const questions = ['What is your GitHub username?', 'What is your email address?
 //Went to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll to figure out how to replace spaces with underscores.
 //also credited in the README file.
 //function that creates the text for the README file.
-const createText = ({ userName, email, title, description, license, install, run, useRepo, contribution }) =>
-  `# ${title}  
-![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)    
+const createText = ({ userName, email, title, description, license, install, run, useRepo, contribution }) => {
+  //add variables that will add text based off if there is a license or not.
+  var licenseBadge = ``;
+  var licenseSection = ``;
+
+  //check if there was a license selected or not.
+  if (license !== "None") {
+    licenseBadge = `![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)  `;
+    licenseSection = `
+
+## License  
+This project is licensed under the ${license} license.  `
+  }
+
+  //return the text for the README file.
+  return `# ${title}  
+${licenseBadge}    
 
 ## Description  
 ${description}  
@@ -22,8 +36,8 @@ ${install}
 \`\`\`  
 
 ## Usage  
-${useRepo}  
-
+${useRepo} 
+${licenseSection}
 ## Contributing  
 ${contribution}  
 
@@ -36,8 +50,9 @@ ${run}
 
 ## Questions  
 If you have any questions about the repo, open an issue or contact me directly at ${email}.  You can find more of my work at [${userName}](https://github.com/${userName}/).  `;
+}
 
-// TODO: Create a function to write README file
+// function that writes to the README file.
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
     //if there is an error, console log the error, other wise console log commit logged!
@@ -45,7 +60,7 @@ function writeToFile(fileName, data) {
   );
 }
 
-// TODO: Create a function to initialize app
+// initialize app by asking questions to the user.
 function init() {
   inquirer
   .prompt([
