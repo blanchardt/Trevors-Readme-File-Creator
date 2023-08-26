@@ -6,6 +6,7 @@ const questions = ['What is your GitHub username?', 'What is your email address?
 
 //Went to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll to figure out how to replace spaces with underscores.
 //also credited in the README file.
+//String.prototype.replaceall(). mdn web docs_. (2023, August 9). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll 
 //function that creates the text for the README file.
 const createText = ({ userName, email, title, description, license, install, run, useRepo, contribution }) => {
   //add variables that will add text based off if there is a license or not.
@@ -18,10 +19,11 @@ const createText = ({ userName, email, title, description, license, install, run
     licenseBadge = `![License: ${license}](https://img.shields.io/badge/License-${license.replaceAll(' ', '_')}-blue.svg)  
 `;
     licenseSection = `
-
 ## License  
-This project is licensed under the ${license} license.  `;
-    licenseInTableOfContents = `* [License](#license)  `;
+This project is licensed under the ${license} license.  
+`;
+    licenseInTableOfContents = `* [License](#license)  
+`;
   }
 
   //return the text for the README file.
@@ -33,8 +35,7 @@ ${description}
 ## Table of Contents  
 * [Installation](#installation)  
 * [Usage](#usage)  
-${licenseInTableOfContents}
-* [Contributing](#contributing)  
+${licenseInTableOfContents}* [Contributing](#contributing)  
 * [Tests](#tests)  
 * [Questions](#questions)
 
@@ -46,7 +47,7 @@ ${install}
 \`\`\`  
 
 ## Usage  
-${useRepo} 
+${useRepo}  
 ${licenseSection}
 ## Contributing  
 ${contribution}  
@@ -86,6 +87,8 @@ function init() {
       validate: function(email) {
         //went to https://www.abstractapi.com/tools/email-regex-guide to learn more about regular expressions,speciffically about validating
         //email addresses.
+        //Ultimate Guide to validating emails with regex (2022). abstract. (2022, January 5).   
+        //  https://www.abstractapi.com/tools/email-regex-guide
         var acceptanceCriteria = /[-a-zA-Z0-9!#$%&'*+-./=<>?^@\\_`|~]+@[-a-zA-Z0-9]+.[-a-zA-Z0-9]/;
         if (acceptanceCriteria.test(email)) {
           return true;

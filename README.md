@@ -5,14 +5,14 @@ Modify the starter code to create a command line application that creates a READ
 ## Description  
 Allows the user to create a README file to allow the user to spend more time on their code.  
 Walkthrough Video:  
-[Walkthrough Video](https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view)  [Readme_File_Creator_Tutorial.webm](https://github.com/blanchardt/Trevors-Readme-File-Creator/assets/137311126/86cce7eb-7a03-4d20-a46c-64e1e142dcdc)
-
+[Walkthrough Video](https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view)  
 Link to Video:  
 https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view  
 
 ## Table of Contents  
 * [Installation](#installation)  
 * [Usage](#usage)  
+* [Credits](#usage)  
 * [License](#license)  
 * [Contributing](#contributing)  
 * [Tests](#tests)  
@@ -26,11 +26,21 @@ npm i inquirer@8.2.4
 ```  
 
 ## Usage  
-Nothing 
+Nothing  
 
+## Credits  
+Modified by: Trevor Blanchard  
+Original file location: https://github.com/coding-boot-camp/potential-enigma/tree/main  
+
+### indes.js  
+
+line 19, 30:
+Went to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll to figure out how to replace spaces with underscores.  also credited in the README file.  
+String.prototype.replaceall(). mdn web docs_. (2023, August 9). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll 
 
 ## License  
 This project is licensed under the MIT license.  
+
 ## Contributing  
 Nothing  
 
