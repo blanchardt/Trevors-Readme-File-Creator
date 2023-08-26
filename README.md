@@ -1,11 +1,8 @@
-# Trevors-Readme-File-Creator
-Modify the starter code to create a command line application that creates a README.md file based off users inputs.
-
-# test  
+# Readme-File-Creator  
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  
 
 ## Description  
-this is a test  
+Allows the user to create a README file.  
 
 ## Table of Contents  
 * [Installation](#installation)  
@@ -19,7 +16,7 @@ this is a test
 To install necessary dependencies, run the following command:  
 
 ```  
-npm i  
+npm i inquirer@8.2.4  
 ```  
 
 ## Usage  

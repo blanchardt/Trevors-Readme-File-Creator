@@ -25,7 +25,7 @@ This project is licensed under the ${license} license.  `;
   }
 
   //return the text for the README file.
-  return `# ${title}  
+  return `# ${title.replaceAll(' ', '-')}  
 ${licenseBadge}
 ## Description  
 ${description}  
