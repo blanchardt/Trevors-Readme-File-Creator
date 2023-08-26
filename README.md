@@ -1,8 +1,13 @@
-# Readme-File-Creator  
+# Trevors-Readme-File-Creator  
+Modify the starter code to create a command line application that creates a README.md file based off users inputs.  
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  
 
 ## Description  
-Allows the user to create a README file.  
+Allows the user to create a README file to allow the user to spend more time on their code.  
+Walkthrough Video:  
+[Walkthrough Video](./assets/videos/Readme_File_Creator_Tutorial.webm)  
+Link to Video:  
+https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view  
 
 ## Table of Contents  
 * [Installation](#installation)  
