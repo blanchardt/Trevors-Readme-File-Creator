@@ -5,7 +5,8 @@ Modify the starter code to create a command line application that creates a READ
 ## Description  
 Allows the user to create a README file to allow the user to spend more time on their code.  
 Walkthrough Video:  
-[Walkthrough Video](https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view)  
+[Walkthrough Video](https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view)  [Readme_File_Creator_Tutorial.webm](https://github.com/blanchardt/Trevors-Readme-File-Creator/assets/137311126/86cce7eb-7a03-4d20-a46c-64e1e142dcdc)
+
 Link to Video:  
 https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view  
 
