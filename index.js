@@ -11,6 +11,7 @@ const createText = ({ userName, email, title, description, license, install, run
   //add variables that will add text based off if there is a license or not.
   var licenseBadge = ``;
   var licenseSection = ``;
+  var licenseInTableOfContents = ``;
 
   //check if there was a license selected or not.
   if (license !== "None") {
@@ -19,7 +20,8 @@ const createText = ({ userName, email, title, description, license, install, run
     licenseSection = `
 
 ## License  
-This project is licensed under the ${license} license.  `
+This project is licensed under the ${license} license.  `;
+    licenseInTableOfContents = `* [License](#license)  `;
   }
 
   //return the text for the README file.
@@ -27,6 +29,14 @@ This project is licensed under the ${license} license.  `
 ${licenseBadge}
 ## Description  
 ${description}  
+
+## Table of Contents  
+* [Installation](#installation)  
+* [Usage](#usage)  
+${licenseInTableOfContents}
+* [Contributing](#contributing)  
+* [Tests](#tests)  
+* [Questions](#questions)
 
 ## Installation  
 To install necessary dependencies, run the following command:  
