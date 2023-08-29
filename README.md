@@ -3,11 +3,11 @@ Modify the starter code to create a command line application that creates a READ
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  
 
 ## Description  
-Allows the user to create a README file to allow the user to spend more time on their code.  
+Allows the user to create a README file to allow the user to spend more time on their code.    
 Walkthrough Video:  
-./assets/videos/Readme_File_Creator_Tutorial.mp4    
-Link to Video:  
 https://drive.google.com/file/d/1EV5bk1gxRT811CQ6AMCV9iRKzc8rgFVB/view  
+Example of responses given:  
+![All Questtions filled out with a message saying Generating README at the end](./assets/images/questions-answered.png)
 
 ## Table of Contents  
 * [Installation](#installation)  

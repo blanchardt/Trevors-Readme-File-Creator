@@ -123,7 +123,7 @@ function init() {
     {
       type: 'input',
       message: questions[6],
-      default: 'npm index.js',
+      default: 'npm test',
       name: 'run',
     },
     {
