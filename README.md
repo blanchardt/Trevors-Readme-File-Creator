@@ -33,7 +33,7 @@ Modified by: Trevor Blanchard
 Original file location: https://github.com/coding-boot-camp/potential-enigma/tree/main  
 The link to the repo for this project is located at: https://github.com/blanchardt/Trevors-Readme-File-Creator  
 
-### indes.js  
+### index.js  
 
 line 19, 30:  
 Went to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll to figure out how to replace spaces with underscores.  also credited in the README file.  
